@@ -1,0 +1,8 @@
+SELECT *FROM CATEGORY;
+
+SELECT cat.id, cat.name, c.clothId, c.name, c.price,c.type, f.footwearId, f.name, f.price, f.type, sa1.faccessoriesId, sa1.name, sa1.price, sa2.faccessoriesId, sa2.name, sa2.price 
+FROM category AS cat LEFT JOIN clothing AS c  
+LEFT JOIN footwearAS f  
+LEFT JOIN accessories AS a
+LEFT JOIN subaccessories1 AS sa1  LEFT JOIN subaccessories2 AS sa2  
+ON a.accessoriesid = sa2.accessoriesid or a.accessoriesid = sa2.accessoriesid
